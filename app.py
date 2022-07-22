@@ -9,7 +9,7 @@ import streamlit as st  # pip install streamlit
 st.set_page_config(page_title="NT Dashboard 4 Kim :-)", page_icon=":bar_chart:", layout="wide")
 
 # ---- READ EXCEL ----
-@st.cache
+@st.cache(hash_funcs={'_json.Scanner': hash})
 def get_data():
     #df = [None]*3
     # df[0] = pd.read_csv("NTD_1.csv")
